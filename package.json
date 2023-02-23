@@ -1,0 +1,24 @@
+{
+  "name": "js-node-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YablonskaTanya/js-node-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YablonskaTanya/js-node-practice/issues"
+  },
+  "homepage": "https://github.com/YablonskaTanya/js-node-practice#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
