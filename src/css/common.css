@@ -90,3 +90,17 @@ img {
 .timer-btn.is-active {
   background-color: #2196f3;
 }
+
+.btn {
+  padding: 5px 20px;
+}
+
+.searchform {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.profile-section {
+  margin-top: 20px;
+}
