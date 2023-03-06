@@ -1,11 +1,20 @@
-const searchbox = document.querySelector('.searchform');
+import debounce from 'lodash.debounce';
+
+const searchbox = document.querySelector('.searchform > input');
 const profileContainer = document.querySelector('.profile-section');
 
-searchbox.addEventListener('submit', e => {
-  e.preventDefault();
-  const login = searchbox.elements.login.value;
-  fetchUser(login).then(showProfile);
-});
+searchbox.addEventListener(
+  'input',
+  debounce(() => {
+    fetchUser(searchbox.value).then(showProfile).catch(showError);
+    console.log(searchbox.value);
+  }, 500),
+);
+
+function showError(error) {
+  console.log(error);
+  profileContainer.innerHTML = 'Ops!!!';
+}
 
 function showProfile({
   public_repos,
@@ -31,7 +40,29 @@ function showProfile({
 }
 
 function fetchUser(login) {
-  return fetch(`https://api.github.com/users/${login}`).then(response =>
-    response.json(),
-  );
+  return fetch(`https://api.github.com/users/${login}`).then(response => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    return response.json();
+  });
 }
+
+// console.log('!');
+
+// const callback = function () {
+//   console.log('after');
+//   console.log('2' + '2');
+// };
+
+// setTimeout(callback, 2000);
+
+// console.log('2');
+
+// Петя біжить швидко, тому що Петя намагається зловити поїзд.
+// const petya = {
+//   username: 'Petya',
+//   showName() {
+//     console.log(petya.username);
+//   },
+// };
