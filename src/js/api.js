@@ -47,22 +47,3 @@ function fetchUser(login) {
     return response.json();
   });
 }
-
-// console.log('!');
-
-// const callback = function () {
-//   console.log('after');
-//   console.log('2' + '2');
-// };
-
-// setTimeout(callback, 2000);
-
-// console.log('2');
-
-// Петя біжить швидко, тому що Петя намагається зловити поїзд.
-// const petya = {
-//   username: 'Petya',
-//   showName() {
-//     console.log(petya.username);
-//   },
-// };
