@@ -1,9 +1,8 @@
-export function add(a, b) {
-  return a + b;
-}
+import './css/common.css';
+import './js.api.js';
 
-//import './css/common.css';
 // const greet = () => {
+
 //   console.log('Hello!');
 // };
 

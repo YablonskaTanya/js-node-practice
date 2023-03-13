@@ -16,12 +16,13 @@
   "bugs": {
     "url": "https://github.com/YablonskaTanya/js-node-practice/issues"
   },
-  "homepage": "https://github.com/YablonskaTanya/js-node-practice#readme",
+  "homepage": "https://github.com/YablonskaTanya/js-node-practice",
   "devDependencies": {
     "parcel": "^2.8.3"
   },
   "dependencies": {
     "bootstrap.native": "^5.0.3",
     "lodash.debounce": "^4.0.8"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
