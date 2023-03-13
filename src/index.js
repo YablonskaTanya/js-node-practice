@@ -1,5 +1,4 @@
 import './css/common.css';
-import './js.api.js';
 
 // const greet = () => {
 
