@@ -1,4 +1,8 @@
-import './css/common.css';
+export function add(a, b) {
+  return a + b;
+}
+
+//import './css/common.css';
 // const greet = () => {
 //   console.log('Hello!');
 // };

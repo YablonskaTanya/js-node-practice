@@ -187,19 +187,81 @@ class Car {
 
 //
 
-function XO(str) {
-  const x = [];
-  const o = [];
+//Check to see if a string has the same amount of 'x's and 'o's.
+//The method must return a boolean and be case insensitive.
+//The string can contain any char.
 
-  for (let i = 0; i < str.length; i += 1) {
-    if (str[i].toLowerCase() === 'x') {
-      x.push(str[i]);
-    } else if (str[i].toLowerCase() === 'o') {
-      o.push(str[i]);
-    }
-  }
+//XO("ooxx") => true
+//XO("xooxx") => false
+//XO("ooxXm") => true
+//XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+//XO("zzoo") => false
 
-  if (x.length === o.length) {
-    return true;
-  } else false;
-}
+// function XO(str) {
+//   const x = [];
+//   const o = [];
+
+//   for (let i = 0; i < str.length; i += 1) {
+//     if (str[i].toLowerCase() === 'x') {
+//       x.push(str[i]);
+//     } else if (str[i].toLowerCase() === 'o') {
+//       o.push(str[i]);
+//     }
+//   }
+
+//   if (x.length === o.length) {
+//     return true;
+//   } else false;
+// }
+
+// function XO(str) {
+//   let x = str.match(/x/gi);
+//   let o = str.match(/o/gi);
+//   return (x && x.length) === (o && o.length);
+// }
+
+// const XO = str => {
+//   str = Array.from(str.toLowerCase());
+//   return (
+//     str.filter(x => x === 'x').length === str.filter(x => x === 'o').length
+//   );
+// };
+
+// function XO(str) {
+//   const count = str
+//     .toLowerCase()
+//     .split('')
+//     .reduce((acc, letter) => {
+//       if (letter === 'x') acc++;
+//       if (letter === 'o') acc--;
+//       return acc;
+//     }, 0);
+
+//   return count === 0;
+// }
+
+// function XO(str) {
+//   var stack = str
+//     .toLowerCase()
+//     .split('')
+//     .filter(el => {
+//       return el == 'x' || el == 'o';
+//     })
+//     .reduce((stack, el) => {
+//       return el == 'x' ? --stack : ++stack;
+//     }, 0);
+
+//   return stack == 0 ? true : false;
+// }
+
+// function XO(str) {
+//   let array1 = [];
+//   let array2 = [];
+//   let letters = str.toLowerCase().split('');
+
+//   letters.map(letter => (letter === 'x' ? array1.push(letter) : null));
+//   letters.map(letter => (letter === 'o' ? array2.push(letter) : null));
+
+//   if (array1.length === array2.length) return true;
+//   return false;
+// }
